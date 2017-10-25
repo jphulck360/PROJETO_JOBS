@@ -3,60 +3,66 @@
 <table border="1">
 	<tr>
 		<td>Cidade</td>
-		<td><%= @curriculum.cidade %></td>
+		<td colspan="2"><%= @curriculum.cidade %></td>
 	</tr>
 
 	<tr>
 		<td>Endereço</td>
-		<td><%= @curriculum.endereco %></td>
+		<td colspan="2"><%= @curriculum.endereco %></td>
 	</tr>
 
 	<tr>
 		<td>UF</td>
-		<td><%= @curriculum.uf %></td>
+		<td colspan="2"><%= @curriculum.uf %></td>
 	</tr>
 
 	<tr>
 		<td>CPF</td>
-		<td><%= @curriculum.cpf %></td>
+		<td colspan="2"><%= @curriculum.cpf %></td>
 	</tr>
 
 	<tr>
 		<td>Telefone Resid.</td>
-		<td><%= @curriculum.telefone_resid %></td>
+		<td colspan="2"><%= @curriculum.telefone_resid %></td>
 	</tr>
 
 	<tr>
 		<td>Telefone Com.</td>
-		<td><%= @curriculum.telefone_com %></td>
+		<td colspan="2"><%= @curriculum.telefone_com %></td>
 	</tr>
 
 	<tr>
 		<td>Idade</td>
-		<td><%= @curriculum.idade %></td>
+		<td colspan="2"><%= @curriculum.idade %></td>
 	</tr>
 
 	<tr>
 		<td>Data Nascimento</td>
-		<td><%= @curriculum.dt_nasc %></td>
+		<td colspan="2"><%= @curriculum.dt_nasc %></td>
 	</tr>
 
 	<tr>
-		<td colspan="2" align="center">Experiências</td>
+		<td colspan="3" align="center">Experiências</td>
 	</tr>
 
 	<tr>
-		<td>Empresa</td>
-		<td>
-			<% @curriculums.each do |curr| %>
-		      <%# experiencia = Experience.find_by(curriculum_id: @curriculum_id) %>
-		      <%= curr.experiences.map(&:empresa).sort.join(", ") %>
-		    <% end %>
-		</td>
+		<td>Empresa</td><td>Data Inicial</td><td>Data Final</td>
 	</tr>
 
-	<tr>
-		<td></td>
-		<td></td>
-	</tr>
+    <%# curr.experiences.map(&:empresa).sort.join(", ") %>
+
+	<% @curriculum.experiences.each do |xp| %>
+		<tr>
+			<td>
+				<%= xp.empresa %>
+			</td>
+			<td>
+				<%= xp.data_inicial %>
+			</td>
+			<td>
+				<%= xp.data_final %>
+			</td>
+		</tr>
+	<% end %>
+
 </table>

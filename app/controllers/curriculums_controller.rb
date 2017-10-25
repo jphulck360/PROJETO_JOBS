@@ -28,10 +28,8 @@ class CurriculumsController < ApplicationController
   def create
     @curriculum = Curriculum.new(curriculum_params)
 
-    @experience = Experience.new(experience_params)
-    @course = Course.new(course_params)
-
-    @experiec
+    #@experience = Experience.new(experience_params)
+    #@course = Course.new(course_params)
 
     respond_to do |format|
       if @curriculum.save

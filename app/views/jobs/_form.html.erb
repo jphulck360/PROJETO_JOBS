@@ -12,11 +12,48 @@
   <% end %>
 
   <table align="center">
+    
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :data_inicial %>
+          <%= f.date_field :data_inicial %>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :data_final %>
+          <%= f.date_field :data_final %>
+        </div>
+      </td>
+    </tr>
+
     <tr>
       <td>
         <div class="field">
           <%= f.label :valor %>
           <%= f.text_field :valor %>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :solicitacao %>
+          <%= f.text_field :solicitacao %>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :descricao %>
+          <%= f.text_field :descricao %>
         </div>
       </td>
     </tr>

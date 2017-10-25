@@ -1,12 +1,12 @@
 <div class="nested-fields">
-  <%= f.label 'Curso' %>
+  <%= f.label 'Profissão' %>
   <%= f.collection_select(:career_id, Career.all, :id, :nome, {prompt: 'SELECIONE'}) %>
 
   <%= f.label :empresa %>
   <%= f.text_field :empresa %>
 
   <%= f.label 'Data Inicial' %>
-  <%= f.date_field :data_inicial, size: 50 %>
+  <%= f.date_field :data_inicial %>
 
   <%= f.label 'Data Final' %>
   <%= f.date_field :data_final %>

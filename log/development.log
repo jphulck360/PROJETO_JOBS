@@ -33565,3 +33565,956 @@ Processing by VisitorsController#index as HTML
 Completed 200 OK in 284ms (Views: 278.3ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/users.users" for 127.0.0.1 at 2017-10-25 16:11:21 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (56.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (74.7ms)
+Completed 200 OK in 1188ms (Views: 1111.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-10-25 16:11:24 -0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (13.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (19.1ms)
+Completed 200 OK in 295ms (Views: 283.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-10-25 16:11:27 -0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (1037.6ms)
+  Rendered jobs/new.html.erb within layouts/application (1040.3ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (9.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (13.4ms)
+Completed 200 OK in 1297ms (Views: 1264.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/jobs/curriculums" for 127.0.0.1 at 2017-10-25 16:11:32 -0200
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"curriculums"}
+  [1m[36mJob Load (26.9ms)[0m  [1m[34mSELECT  `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 30ms (ActiveRecord: 26.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Job with 'id'=curriculums:
+  app/controllers/jobs_controller.rb:67:in `set_job'
+
+Started POST "/__better_errors/e3ce93553d107854/variables" for 127.0.0.1 at 2017-10-25 16:11:32 -0200
+Started GET "/" for 127.0.0.1 at 2017-10-25 16:11:35 -0200
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (7.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (14.5ms)
+Completed 200 OK in 248ms (Views: 245.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 16:11:36 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (1.8ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  Rendered curriculums/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (2.4ms)
+  Rendered layouts/_navigation.html.erb (13.8ms)
+Completed 200 OK in 347ms (Views: 278.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/curriculums/new" for 127.0.0.1 at 2017-10-25 16:11:39 -0200
+Processing by CurriculumsController#new as HTML
+  Rendering curriculums/new.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered curriculums/_curriculum_course_fields.html.erb (34.8ms)
+  [1m[36mCareer Load (0.6ms)[0m  [1m[34mSELECT `careers`.* FROM `careers`[0m
+  Rendered curriculums/_experience_fields.html.erb (35.1ms)
+  [1m[36mLanguage Load (3.0ms)[0m  [1m[34mSELECT `languages`.* FROM `languages`[0m
+  Rendered curriculums/_form.html.erb (474.7ms)
+  Rendered curriculums/new.html.erb within layouts/application (476.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (13.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (16.7ms)
+Completed 200 OK in 813ms (Views: 758.7ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/curriculums" for 127.0.0.1 at 2017-10-25 16:19:38 -0200
+Processing by CurriculumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SET+enneTPEALa7+H4T0tpIjYqKf9ceSFuRHOWZ5F/DFsQWgUi3dU/jq7BstuFThhJqaqoT7fF85oPt5F5wmhg==", "curriculum"=>{"cidade"=>"Munique", "endereco"=>"Rua A", "telefone_resid"=>"", "telefone_com"=>"", "curriculum_courses_attributes"=>{"1508955549381"=>{"course_id"=>"99", "instituicao"=>"ATK", "data_inicial"=>"2016-02-09", "data_final"=>"", "_destroy"=>"false"}}, "language_ids"=>["", "12", "16"]}, "commit"=>"Create Curriculum"}
+  [1m[36mLanguage Load (0.5ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` WHERE `languages`.`id` IN (12, 16)[0m
+Completed 500 Internal Server Error in 626ms (ActiveRecord: 1.9ms)
+
+
+
+NameError - undefined local variable or method `experience_params' for #<CurriculumsController:0x007f7b8dd65780>
+Did you mean?  experience_path
+               experience_url
+               experiences_path:
+  app/controllers/curriculums_controller.rb:31:in `create'
+
+Started POST "/__better_errors/4fa3c59b8d8c92d7/variables" for 127.0.0.1 at 2017-10-25 16:19:39 -0200
+Started POST "/curriculums" for 127.0.0.1 at 2017-10-25 16:20:57 -0200
+Processing by CurriculumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SET+enneTPEALa7+H4T0tpIjYqKf9ceSFuRHOWZ5F/DFsQWgUi3dU/jq7BstuFThhJqaqoT7fF85oPt5F5wmhg==", "curriculum"=>{"cidade"=>"Munique", "endereco"=>"Rua A", "telefone_resid"=>"", "telefone_com"=>"", "curriculum_courses_attributes"=>{"1508955549381"=>{"course_id"=>"99", "instituicao"=>"ATK", "data_inicial"=>"2016-02-09", "data_final"=>"", "_destroy"=>"false"}}, "language_ids"=>["", "12", "16"]}, "commit"=>"Create Curriculum"}
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` WHERE `languages`.`id` IN (12, 16)[0m
+Completed 500 Internal Server Error in 797ms (ActiveRecord: 16.8ms)
+
+
+
+NameError - undefined local variable or method `experience_params' for #<CurriculumsController:0x007f7b8e6ab3f8>
+Did you mean?  experience_path
+               experience_url
+               experiences_path:
+  app/controllers/curriculums_controller.rb:31:in `create'
+
+Started POST "/__better_errors/3a9b3d99796b9c74/variables" for 127.0.0.1 at 2017-10-25 16:20:59 -0200
+Started POST "/curriculums" for 127.0.0.1 at 2017-10-25 16:21:09 -0200
+Processing by CurriculumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SET+enneTPEALa7+H4T0tpIjYqKf9ceSFuRHOWZ5F/DFsQWgUi3dU/jq7BstuFThhJqaqoT7fF85oPt5F5wmhg==", "curriculum"=>{"cidade"=>"Munique", "endereco"=>"Rua A", "telefone_resid"=>"", "telefone_com"=>"", "curriculum_courses_attributes"=>{"1508955549381"=>{"course_id"=>"99", "instituicao"=>"ATK", "data_inicial"=>"2016-02-09", "data_final"=>"", "_destroy"=>"false"}}, "language_ids"=>["", "12", "16"]}, "commit"=>"Create Curriculum"}
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` WHERE `languages`.`id` IN (12, 16)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `curriculums` (`cidade`, `endereco`, `telefone_resid`, `telefone_com`, `created_at`, `updated_at`) VALUES ('Munique', 'Rua A', '', '', '2017-10-25 18:21:09', '2017-10-25 18:21:09')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `curriculum_languages` (`curriculum_id`, `language_id`, `created_at`, `updated_at`) VALUES (2, 12, '2017-10-25 18:21:09', '2017-10-25 18:21:09')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `curriculum_languages` (`curriculum_id`, `language_id`, `created_at`, `updated_at`) VALUES (2, 16, '2017-10-25 18:21:09', '2017-10-25 18:21:09')[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO `curriculum_courses` (`curriculum_id`, `course_id`, `instituicao`, `data_inicial`, `created_at`, `updated_at`) VALUES (2, 99, 'ATK', '2016-02-09', '2017-10-25 18:21:09', '2017-10-25 18:21:09')[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/curriculums/2
+Completed 302 Found in 226ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:21:10 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (4.2ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (11.2ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (10.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (54.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (93.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (98.8ms)
+Completed 200 OK in 652ms (Views: 564.5ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:25:59 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (1.9ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (2.7ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (11.7ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (7.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (11.4ms)
+Completed 200 OK in 265ms (Views: 241.5ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:26:23 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (3.9ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (4.6ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (4.0ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (11.9ms)
+Completed 200 OK in 288ms (Views: 264.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:26:35 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (7.1ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (2.2ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (4.2ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (20.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (21.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (34.4ms)
+Completed 200 OK in 481ms (Views: 461.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/curriculums/curriculums" for 127.0.0.1 at 2017-10-25 16:26:40 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"curriculums"}
+  [1m[36mCurriculum Load (0.9ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=curriculums:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/3b08f3cc4f98784b/variables" for 127.0.0.1 at 2017-10-25 16:26:40 -0200
+Started GET "/" for 127.0.0.1 at 2017-10-25 16:26:43 -0200
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (9.4ms)
+Completed 200 OK in 374ms (Views: 371.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 16:26:45 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (5.2ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (40.4ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (83.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (7.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (11.5ms)
+Completed 200 OK in 342ms (Views: 294.1ms | ActiveRecord: 46.3ms)
+
+
+Started GET "/curriculums/2/edit" for 127.0.0.1 at 2017-10-25 16:26:48 -0200
+Processing by CurriculumsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (0.5ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/edit.html.erb within layouts/application
+  [1m[36mCurriculumCourse Load (0.5ms)[0m  [1m[34mSELECT `curriculum_courses`.* FROM `curriculum_courses` WHERE `curriculum_courses`.`curriculum_id` = 2[0m
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered curriculums/_curriculum_course_fields.html.erb (54.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered curriculums/_curriculum_course_fields.html.erb (25.0ms)
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  [1m[36mCareer Load (0.6ms)[0m  [1m[34mSELECT `careers`.* FROM `careers`[0m
+  Rendered curriculums/_experience_fields.html.erb (60.8ms)
+  [1m[36mLanguage Load (0.5ms)[0m  [1m[34mSELECT `languages`.* FROM `languages`[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `languages`.id FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/_form.html.erb (223.6ms)
+  Rendered curriculums/edit.html.erb within layouts/application (229.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (11.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (15.4ms)
+Completed 200 OK in 571ms (Views: 557.4ms | ActiveRecord: 10.6ms)
+
+
+Started PATCH "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:28:52 -0200
+Processing by CurriculumsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mce1O2helZ0W0ahvx18AvFis8giW+N5RTCIQdSCTHtIUMk7hQ60EP+4W6or1Y6DrThUKAI32ZZxjZqw1UXYvpA==", "curriculum"=>{"cidade"=>"Munique", "endereco"=>"Rua A", "telefone_resid"=>"", "telefone_com"=>"", "curriculum_courses_attributes"=>{"0"=>{"course_id"=>"99", "instituicao"=>"ATK", "data_inicial"=>"2016-02-09", "data_final"=>"", "_destroy"=>"false", "id"=>"2"}}, "experiences_attributes"=>{"1508956016432"=>{"career_id"=>"41", "empresa"=>"UBK", "data_inicial"=>"2016-02-09", "data_final"=>"2016-04-09", "descricao"=>"...............", "_destroy"=>"false"}, "1508956019586"=>{"career_id"=>"52", "empresa"=>"UBK ADM", "data_inicial"=>"2016-09-21", "data_final"=>"", "descricao"=>".....", "_destroy"=>"false"}}, "language_ids"=>["", "12", "16"]}, "commit"=>"Update Curriculum", "id"=>"2"}
+  [1m[36mCurriculum Load (4.3ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+Unpermitted parameter: descricao
+Unpermitted parameter: descricao
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLanguage Load (0.5ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` WHERE `languages`.`id` IN (12, 16)[0m
+  [1m[36mLanguage Load (7.1ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  [1m[36mCurriculumCourse Load (1.4ms)[0m  [1m[34mSELECT `curriculum_courses`.* FROM `curriculum_courses` WHERE `curriculum_courses`.`curriculum_id` = 2 AND `curriculum_courses`.`id` = 2[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO `experiences` (`empresa`, `data_inicial`, `data_final`, `career_id`, `curriculum_id`, `created_at`, `updated_at`) VALUES ('UBK', '2016-02-09', '2016-04-09', 41, 2, '2017-10-25 18:28:52', '2017-10-25 18:28:52')[0m
+  [1m[35mSQL (58.9ms)[0m  [1m[32mINSERT INTO `experiences` (`empresa`, `data_inicial`, `career_id`, `curriculum_id`, `created_at`, `updated_at`) VALUES ('UBK ADM', '2016-09-21', 52, 2, '2017-10-25 18:28:52', '2017-10-25 18:28:52')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/curriculums/2
+Completed 302 Found in 133ms (ActiveRecord: 80.6ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:28:52 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (0.5ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (3.5ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (93.1ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 4.4ms)
+
+
+
+NoMethodError - undefined method `datafinal' for #<Experience:0x007f7b88039f20>
+Did you mean?  data_final
+               data_final?
+               data_final=:
+  app/views/curriculums/show.html.erb:60:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_70084270032920'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_70084270032920'
+
+Started POST "/__better_errors/81d637ef4a7ffe07/variables" for 127.0.0.1 at 2017-10-25 16:28:52 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:29:05 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (1.3ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (3.0ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (6.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 10.8ms)
+
+
+
+ArgumentError - comparison of Date with nil failed:
+  app/views/curriculums/show.html.erb:60:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_70084336510060'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_70084336510060'
+
+Started POST "/__better_errors/5d700255e22b3ca3/variables" for 127.0.0.1 at 2017-10-25 16:29:06 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:30:47 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (4.6ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (5.0ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (68.1ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 10.1ms)
+
+
+
+NoMethodError - undefined method `date_final' for #<Experience::ActiveRecord_Associations_CollectionProxy:0x007f7b8dad2428>:
+  app/views/curriculums/show.html.erb:60:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_79678920'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_79678920'
+
+Started POST "/__better_errors/d27330194be82348/variables" for 127.0.0.1 at 2017-10-25 16:30:47 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:31:05 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (5.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (1.9ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (4.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 11.8ms)
+
+
+
+NoMethodError - undefined method `call' for #<Experience::ActiveRecord_Associations_CollectionProxy:0x000000034030f0>
+Did you mean?  caller:
+  app/views/curriculums/show.html.erb:60:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_19570060'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_19570060'
+
+Started POST "/__better_errors/d6015f9f112f7578/variables" for 127.0.0.1 at 2017-10-25 16:31:05 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:31:17 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (3.1ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (6.0ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (5.6ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 14.7ms)
+
+
+
+ArgumentError - comparison of Date with nil failed:
+  app/views/curriculums/show.html.erb:63:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_43481880'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_43481880'
+
+Started POST "/__better_errors/656fa2a8a78a007d/variables" for 127.0.0.1 at 2017-10-25 16:31:17 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:35:30 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (1.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (10.8ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (3.7ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (28.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 16.0ms)
+
+
+
+ArgumentError - comparison of Date with nil failed:
+  app/views/curriculums/show.html.erb:64:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_70084336431920'
+  app/views/curriculums/show.html.erb:52:in `_app_views_curriculums_show_html_erb__1880922237297554652_70084336431920'
+
+Started POST "/__better_errors/28fccefde592f97f/variables" for 127.0.0.1 at 2017-10-25 16:35:30 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:35:49 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (4.3ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (9.2ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (4.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (4.9ms)
+  Rendered layouts/_navigation.html.erb (17.5ms)
+Completed 200 OK in 434ms (Views: 410.6ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:40:37 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (2.6ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mExperience Load (0.6ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 3.6ms)
+
+
+
+NoMethodError - undefined method `empresa' for #<Experience::ActiveRecord_Associations_CollectionProxy:0x007f7b8f4dbea0>:
+  app/views/curriculums/show.html.erb:59:in `block in _app_views_curriculums_show_html_erb__1880922237297554652_70084329857200'
+  app/views/curriculums/show.html.erb:56:in `_app_views_curriculums_show_html_erb__1880922237297554652_70084329857200'
+
+Started POST "/__better_errors/10deccbeaa4013f5/variables" for 127.0.0.1 at 2017-10-25 16:40:37 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/" for 127.0.0.1 at 2017-10-25 16:46:48 -0200
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (5.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.9ms)
+  Rendered layouts/_navigation.html.erb (12.6ms)
+Completed 200 OK in 249ms (Views: 238.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 16:46:52 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (5.3ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (2.6ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (10.3ms)
+Completed 200 OK in 237ms (Views: 226.6ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 16:46:55 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (3.7ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  Rendered curriculums/show.html.erb within layouts/application (33.6ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 4.1ms)
+
+
+
+NoMethodError - undefined method `experiences' for #<Curriculum::ActiveRecord_Relation:0x007f7b88c89f28>:
+  app/views/curriculums/show.html.erb:56:in `_app_views_curriculums_show_html_erb__1880922237297554652_70084276274640'
+
+Started POST "/__better_errors/1adc14734d448f04/variables" for 127.0.0.1 at 2017-10-25 16:46:55 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 17:03:44 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (0.5ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  Rendered curriculums/show.html.erb within layouts/application (49.3ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `experience' for #<Curriculum::ActiveRecord_Relation:0x000000053e5bc0>:
+  app/views/curriculums/show.html.erb:56:in `_app_views_curriculums_show_html_erb__1880922237297554652_43997100'
+
+Started POST "/__better_errors/ed74b728882453c2/variables" for 127.0.0.1 at 2017-10-25 17:03:45 -0200
+  [1m[36mExperience Load (0.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences`[0m
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 17:05:03 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (2.5ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mExperience Load (2.4ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (5.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (9.3ms)
+Completed 200 OK in 288ms (Views: 276.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 17:10:00 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (3.2ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mExperience Load (3.2ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (19.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (12.5ms)
+Completed 200 OK in 337ms (Views: 326.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/curriculums/curriculums" for 127.0.0.1 at 2017-10-25 17:10:12 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"curriculums"}
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=curriculums:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/38c4198f915b8d02/variables" for 127.0.0.1 at 2017-10-25 17:10:12 -0200
+Started GET "/curriculums/curriculums" for 127.0.0.1 at 2017-10-25 17:10:21 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"curriculums"}
+  [1m[36mCurriculum Load (3.9ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 11ms (ActiveRecord: 3.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=curriculums:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/4cda9a3312e0def9/variables" for 127.0.0.1 at 2017-10-25 17:10:21 -0200
+Started GET "/users.users" for 127.0.0.1 at 2017-10-25 17:10:29 -0200
+Processing by UsersController#index as 
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (5.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (19.9ms)
+Completed 200 OK in 236ms (Views: 222.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 17:10:31 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (5.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+Completed 200 OK in 206ms (Views: 200.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 17:10:38 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (0.5ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (14.4ms)
+Completed 200 OK in 208ms (Views: 198.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 17:10:39 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (2.9ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (1.8ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (7.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (11.0ms)
+Completed 200 OK in 285ms (Views: 278.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-10-25 17:10:42 -0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (30.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (10.0ms)
+Completed 200 OK in 214ms (Views: 182.5ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2017-10-25 17:10:44 -0200
+Processing by CareersController#index as HTML
+  Rendering careers/index.html.erb within layouts/application
+  [1m[36mCareer Load (0.6ms)[0m  [1m[34mSELECT `careers`.* FROM `careers`[0m
+  Rendered careers/index.html.erb within layouts/application (41.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (9.5ms)
+Completed 200 OK in 295ms (Views: 266.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/careers/41" for 127.0.0.1 at 2017-10-25 17:10:47 -0200
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mCareer Load (0.4ms)[0m  [1m[34mSELECT  `careers`.* FROM `careers` WHERE `careers`.`id` = 41 LIMIT 1[0m
+  Rendering careers/show.html.erb within layouts/application
+  Rendered careers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (8.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (16.6ms)
+Completed 200 OK in 364ms (Views: 355.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/careers/careers" for 127.0.0.1 at 2017-10-25 17:10:48 -0200
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"careers"}
+  [1m[36mCareer Load (4.1ms)[0m  [1m[34mSELECT  `careers`.* FROM `careers` WHERE `careers`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 10ms (ActiveRecord: 4.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Career with 'id'=careers:
+  app/controllers/careers_controller.rb:67:in `set_career'
+
+Started POST "/__better_errors/c5b9fc0ffcbb53d9/variables" for 127.0.0.1 at 2017-10-25 17:10:48 -0200
+Started GET "/careers/courses" for 127.0.0.1 at 2017-10-25 17:10:55 -0200
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"courses"}
+  [1m[36mCareer Load (6.6ms)[0m  [1m[34mSELECT  `careers`.* FROM `careers` WHERE `careers`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 17ms (ActiveRecord: 6.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Career with 'id'=courses:
+  app/controllers/careers_controller.rb:67:in `set_career'
+
+Started POST "/__better_errors/e2c612da51416f78/variables" for 127.0.0.1 at 2017-10-25 17:10:55 -0200
+Started GET "/" for 127.0.0.1 at 2017-10-25 17:10:59 -0200
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (5.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (8.7ms)
+Completed 200 OK in 203ms (Views: 200.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2017-10-25 17:11:14 -0200
+Processing by CareersController#index as HTML
+  Rendering careers/index.html.erb within layouts/application
+  [1m[36mCareer Load (1.6ms)[0m  [1m[34mSELECT `careers`.* FROM `careers`[0m
+  Rendered careers/index.html.erb within layouts/application (60.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (10.2ms)
+Completed 200 OK in 293ms (Views: 284.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/curriculums" for 127.0.0.1 at 2017-10-25 17:11:24 -0200
+Processing by CurriculumsController#index as HTML
+  Rendering curriculums/index.html.erb within layouts/application
+  [1m[36mCurriculum Load (1.0ms)[0m  [1m[34mSELECT `curriculums`.* FROM `curriculums`[0m
+  [1m[36mLanguage Load (2.4ms)[0m  [1m[34mSELECT `languages`.* FROM `languages` INNER JOIN `curriculum_languages` ON `languages`.`id` = `curriculum_languages`.`language_id` WHERE `curriculum_languages`.`curriculum_id` = 2[0m
+  Rendered curriculums/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (6.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (15.1ms)
+Completed 200 OK in 220ms (Views: 209.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/curriculums/2" for 127.0.0.1 at 2017-10-25 17:11:44 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCurriculum Load (4.2ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 2 LIMIT 1[0m
+  Rendering curriculums/show.html.erb within layouts/application
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT `experiences`.* FROM `experiences` WHERE `experiences`.`curriculum_id` = 2[0m
+  Rendered curriculums/show.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (9.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (19.7ms)
+Completed 200 OK in 234ms (Views: 224.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/curriculums/careers" for 127.0.0.1 at 2017-10-25 17:11:59 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"careers"}
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=careers:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/c92f2118770b3551/variables" for 127.0.0.1 at 2017-10-25 17:11:59 -0200
+Started GET "/curriculums/curriculums" for 127.0.0.1 at 2017-10-25 17:12:02 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"curriculums"}
+  [1m[36mCurriculum Load (0.4ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=curriculums:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/c7c9f53efd8dba41/variables" for 127.0.0.1 at 2017-10-25 17:12:02 -0200
+Started GET "/curriculums/profiles" for 127.0.0.1 at 2017-10-25 17:12:04 -0200
+Processing by CurriculumsController#show as HTML
+  Parameters: {"id"=>"profiles"}
+  [1m[36mCurriculum Load (1.0ms)[0m  [1m[34mSELECT  `curriculums`.* FROM `curriculums` WHERE `curriculums`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Curriculum with 'id'=profiles:
+  app/controllers/curriculums_controller.rb:72:in `set_curriculum'
+
+Started POST "/__better_errors/e6fa13581e6d1394/variables" for 127.0.0.1 at 2017-10-25 17:12:05 -0200
+Started GET "/" for 127.0.0.1 at 2017-10-25 17:12:07 -0200
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (6.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (23.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (33.0ms)
+Completed 200 OK in 346ms (Views: 330.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2017-10-25 17:12:09 -0200
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (9.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (13.0ms)
+Completed 200 OK in 244ms (Views: 238.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-10-25 17:12:13 -0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.7ms)
+  Rendered jobs/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (7.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (10.6ms)
+Completed 200 OK in 232ms (Views: 188.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2017-10-25 17:24:09 -0200
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (12.8ms)
+  Rendered jobs/new.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  `profiles`.* FROM `profiles` WHERE `profiles`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (9.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (13.6ms)
+Completed 200 OK in 204ms (Views: 201.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1219.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `PROJETO_JOBS_development`[0m
+  [1m[35m (6.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `PROJETO_JOBS_test`[0m
+  [1m[35m (158.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT GET_LOCK('8164309475851107495', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProfiles (20171004191038)
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE `profiles` (`id` int AUTO_INCREMENT PRIMARY KEY, `perfil` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191038')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCurriculums (20171004191045)
+  [1m[35m (47.7ms)[0m  [1m[35mCREATE TABLE `curriculums` (`id` int AUTO_INCREMENT PRIMARY KEY, `cidade` varchar(255), `endereco` varchar(255), `uf` varchar(255), `cpf` varchar(255), `telefone_resid` varchar(255), `telefone_com` varchar(255), `idade` int, `dt_nasc` date, `status_curriculo` int DEFAULT 0, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_curriculums_on_user_id`  (`user_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191045')[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20171004191051)
+  [1m[35m (67.5ms)[0m  [1m[35mCREATE TABLE `jobs` (`id` int AUTO_INCREMENT PRIMARY KEY, `valor` float, `data_inicial` date, `data_final` date, `solicitacao` varchar(255), `descricao` text, `status` int, `solicitante_id` int, `user_id` int, `career_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_jobs_on_user_id`  (`user_id`),  INDEX `index_jobs_on_career_id`  (`career_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191051')[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCareers (20171004191058)
+  [1m[35m (46.5ms)[0m  [1m[35mCREATE TABLE `careers` (`id` int AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191058')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCourses (20171004191105)
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE TABLE `courses` (`id` int AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191105')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExperiences (20171004191116)
+  [1m[35m (38.8ms)[0m  [1m[35mCREATE TABLE `experiences` (`id` int AUTO_INCREMENT PRIMARY KEY, `empresa` varchar(255), `data_inicial` date, `data_final` date, `descricao` text, `career_id` int, `curriculum_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_experiences_on_career_id`  (`career_id`),  INDEX `index_experiences_on_curriculum_id`  (`curriculum_id`), CONSTRAINT `fk_rails_4f4e2274e9`
+FOREIGN KEY (`career_id`)
+  REFERENCES `careers` (`id`)
+, CONSTRAINT `fk_rails_8d8aa7055c`
+FOREIGN KEY (`curriculum_id`)
+  REFERENCES `curriculums` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191116')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20171004191327)
+  [1m[35m (40.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `nome` varchar(255), `cpf` varchar(255), `idade` int, `dt_nasc` date, `cidade` varchar(255), `uf` varchar(255), `endereco` varchar(255), `pontuacao` int DEFAULT 0, `qtd_prestados` int DEFAULT 0, `qtd_solicitados` int DEFAULT 0, `ativa_perfil_trab` int DEFAULT 0, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `profile_id` int, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_users_on_profile_id`  (`profile_id`), CONSTRAINT `fk_rails_a8794354f0`
+FOREIGN KEY (`profile_id`)
+  REFERENCES `profiles` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (79.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191327')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAttachmentFotoCToCareers (20171004191429)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentFotoCToCareers < ActiveRecord::Migration[4.2] (called from require at /home/joao/Documentos/RAILS/EXEMPLOS_APPS/PROJETO_JOBS/bin/rails:9)
+  [1m[35m (87.7ms)[0m  [1m[35mALTER TABLE `careers` ADD `foto_c_file_name` varchar(255)[0m
+  [1m[35m (70.9ms)[0m  [1m[35mALTER TABLE `careers` ADD `foto_c_content_type` varchar(255)[0m
+  [1m[35m (74.6ms)[0m  [1m[35mALTER TABLE `careers` ADD `foto_c_file_size` int[0m
+  [1m[35m (46.2ms)[0m  [1m[35mALTER TABLE `careers` ADD `foto_c_updated_at` datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191429')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAttachmentFotoCurrToCurriculums (20171004191435)
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentFotoCurrToCurriculums < ActiveRecord::Migration[4.2] (called from require at /home/joao/Documentos/RAILS/EXEMPLOS_APPS/PROJETO_JOBS/bin/rails:9)
+  [1m[35m (70.6ms)[0m  [1m[35mALTER TABLE `curriculums` ADD `foto_curr_file_name` varchar(255)[0m
+  [1m[35m (92.5ms)[0m  [1m[35mALTER TABLE `curriculums` ADD `foto_curr_content_type` varchar(255)[0m
+  [1m[35m (74.0ms)[0m  [1m[35mALTER TABLE `curriculums` ADD `foto_curr_file_size` int[0m
+  [1m[35m (51.7ms)[0m  [1m[35mALTER TABLE `curriculums` ADD `foto_curr_updated_at` datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171004191435')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePhones (20171006160408)
+  [1m[35m (33.1ms)[0m  [1m[35mCREATE TABLE `phones` (`id` int AUTO_INCREMENT PRIMARY KEY, `telefone` varchar(255), `tipo` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171006160408')[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLanguages (20171006160722)
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE TABLE `languages` (`id` int AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171006160722')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20171006190346)
+  [1m[35m (69.0ms)[0m  [1m[35mCREATE TABLE `messages` (`id` int AUTO_INCREMENT PRIMARY KEY, `msg` varchar(255), `data` date, `hora` time, `status` int, `solicitante_id` int, `user_id` int, `job_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_messages_on_user_id`  (`user_id`),  INDEX `index_messages_on_job_id`  (`job_id`), CONSTRAINT `fk_rails_273a25a7a6`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_d7e012c0bb`
+FOREIGN KEY (`job_id`)
+  REFERENCES `jobs` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171006190346')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCurriculumLanguages (20171009163136)
+  [1m[35m (36.7ms)[0m  [1m[35mCREATE TABLE `curriculum_languages` (`id` int AUTO_INCREMENT PRIMARY KEY, `curriculum_id` int, `language_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_curriculum_languages_on_curriculum_id`  (`curriculum_id`),  INDEX `index_curriculum_languages_on_language_id`  (`language_id`), CONSTRAINT `fk_rails_a11b9faa73`
+FOREIGN KEY (`curriculum_id`)
+  REFERENCES `curriculums` (`id`)
+, CONSTRAINT `fk_rails_402cfab4db`
+FOREIGN KEY (`language_id`)
+  REFERENCES `languages` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171009163136')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCurriculumCourses (20171009163208)
+  [1m[35m (33.2ms)[0m  [1m[35mCREATE TABLE `curriculum_courses` (`id` int AUTO_INCREMENT PRIMARY KEY, `curriculum_id` int, `course_id` int, `instituicao` varchar(255), `data_inicial` date, `data_final` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_curriculum_courses_on_curriculum_id`  (`curriculum_id`),  INDEX `index_curriculum_courses_on_course_id`  (`course_id`), CONSTRAINT `fk_rails_e69377a6ac`
+FOREIGN KEY (`curriculum_id`)
+  REFERENCES `curriculums` (`id`)
+, CONSTRAINT `fk_rails_e756d4597e`
+FOREIGN KEY (`course_id`)
+  REFERENCES `courses` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171009163208')[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-10-25 19:25:20', '2017-10-25 19:25:20')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8164309475851107495')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `careers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'careers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `courses`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'courses'[0m
+  [1m[35m (10.9ms)[0m  [1m[35mSHOW CREATE TABLE `curriculum_courses`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'curriculum_courses'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `curriculum_languages`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `curriculums`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'curriculums'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `experiences`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'experiences'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `jobs`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'jobs'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `languages`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'languages'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `messages`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'messages'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `phones`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'phones'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `profiles`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
