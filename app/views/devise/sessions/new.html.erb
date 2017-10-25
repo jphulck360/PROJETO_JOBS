@@ -1,0 +1,60 @@
+<!--
+<div id="titulo" class="page-header">
+  Tela Login
+</div>
+-->
+
+<br>
+
+<table id="inicial" align="center" class="animated pulse">
+  <tr>
+    <td>
+      <div>
+        <%= image_tag 'logo.png' %>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <table id="inicial" align="center" class="animated pulse">
+    <tr>
+      <td>
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+      </td>
+      <td>
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= render "devise/shared/links" %>
+      </td>
+    </tr>
+
+  </table>
+<% end %>

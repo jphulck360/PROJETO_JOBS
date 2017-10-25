@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_phone_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Phone
+  <% end %>
+  <h1>Listing phones</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Telefone</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @phones) do |phone| %>
+            <td><%= phone.telefone %></td>
+            <td><%= link_to 'Show', phone %></td>
+        <td><%= link_to 'Edit', edit_phone_path(phone) %></td>
+        <td><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

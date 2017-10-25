@@ -1,0 +1,15 @@
+<div class="nested-fields">
+  <%= f.label 'Curso' %>
+  <%= f.collection_select(:course_id, Course.all, :id, :nome, {prompt: 'SELECIONE'}) %> 
+  
+  <%= f.label 'Instituição' %>
+  <%= f.text_field :instituicao %>
+
+  <%= f.label 'Data Inicial' %>
+  <%= f.text_field :data_inicial %>
+
+  <%= f.label 'Data Final' %>
+  <%= f.text_field :data_final %>
+
+  <%= link_to_remove_association "Remover Curso", f %>
+</div>

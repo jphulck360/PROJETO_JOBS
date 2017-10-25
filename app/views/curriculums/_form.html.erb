@@ -1,0 +1,129 @@
+<%= form_for(curriculum) do |f| %>
+  <% if curriculum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(curriculum.errors.count, "error") %> prohibited this curriculum from being saved:</h2>
+
+      <ul>
+      <% curriculum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table align="center" colspan="2">
+    <tr>
+      <td>
+        <div class="field">
+          <%= image_tag("ICONES/CURRICULO/foto_curriculo.jpg", size: 150) %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.label 'Imagem' %>
+          <%= f.file_field :foto_curr %> <!-- Antes era 'avatar' -->
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :cidade %>
+          <%= f.text_field :cidade %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.label :endereco %>
+          <%= f.text_field :endereco, size: 50 %>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label 'Telefone Residencial' %>
+          <%= f.text_field :telefone_resid %>
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.label 'Telefone Comercial' %>
+          <%= f.text_field :telefone_com %>
+        </div>
+      </td>
+    </tr>
+
+    <hr>
+
+    <tr></tr>
+    <tr></tr>
+
+    <tr>
+      <td>Cursos</td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="field">
+          <%= f.fields_for :curriculum_courses do |cc| %>
+            <%= render 'curriculum_course_fields', f: cc %>
+          <% end %>
+
+          <div class="links">
+            <%= link_to_add_association 'Adicionar Curso', f, :curriculum_courses, class: "btn btn-default add-button" %>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <hr>
+    <tr></tr>
+    <tr></tr>
+
+    <tr>
+      <td>Experiências</td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="field">
+          <%= f.fields_for :experiences do |xp| %>
+            <%= render '_experience_fields', f: xp %>
+          <% end %>
+
+          <div class="links">
+            <%= link_to_add_association 'Adicionar Experiência', f, :experiences, class: "btn btn-default add-button" %>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <br><br>
+    <hr>
+
+    <tr>
+      <td>Idiomas</td>
+    </tr>
+    
+    <%= f.collection_check_boxes :language_ids, Language.all, :id, :nome do |lang| %>
+      <tr>
+        <div class="collection-check-box">
+          <td><%= lang.label %></td>
+          <td><%= lang.check_box %></td>
+        </div>
+      </tr>
+    <% end %>
+
+    <tr>
+      <td>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+<% end %>

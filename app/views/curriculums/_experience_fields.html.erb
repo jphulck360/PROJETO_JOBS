@@ -1,0 +1,18 @@
+<div class="nested-fields">
+  <%= f.label 'Curso' %>
+  <%= f.collection_select(:career_id, Career.all, :id, :nome, {prompt: 'SELECIONE'}) %>
+
+  <%= f.label :empresa %>
+  <%= f.text_field :empresa %>
+
+  <%= f.label 'Data Inicial' %>
+  <%= f.date_field :data_inicial, size: 50 %>
+
+  <%= f.label 'Data Final' %>
+  <%= f.date_field :data_final %>
+
+  <%= f.label 'Descrição' %>
+  <%= f.text_area :descricao, "cols" => 60, "rows" => 5, maxlength: 2000 %>
+
+  <%= link_to_remove_association "Remover Experiência", f %>
+</div>

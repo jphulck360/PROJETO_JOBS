@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<table border="1">
+	<tr>
+		<td>Cidade</td>
+		<td><%= @curriculum.cidade %></td>
+	</tr>
+
+	<tr>
+		<td>Endereço</td>
+		<td><%= @curriculum.endereco %></td>
+	</tr>
+
+	<tr>
+		<td>UF</td>
+		<td><%= @curriculum.uf %></td>
+	</tr>
+
+	<tr>
+		<td>CPF</td>
+		<td><%= @curriculum.cpf %></td>
+	</tr>
+
+	<tr>
+		<td>Telefone Resid.</td>
+		<td><%= @curriculum.telefone_resid %></td>
+	</tr>
+
+	<tr>
+		<td>Telefone Com.</td>
+		<td><%= @curriculum.telefone_com %></td>
+	</tr>
+
+	<tr>
+		<td>Idade</td>
+		<td><%= @curriculum.idade %></td>
+	</tr>
+
+	<tr>
+		<td>Data Nascimento</td>
+		<td><%= @curriculum.dt_nasc %></td>
+	</tr>
+
+	<tr>
+		<td colspan="2" align="center">Experiências</td>
+	</tr>
+
+	<tr>
+		<td>Empresa</td>
+		<td>
+			<% @curriculums.each do |curr| %>
+		      <%# experiencia = Experience.find_by(curriculum_id: @curriculum_id) %>
+		      <%= curr.experiences.map(&:empresa).sort.join(", ") %>
+		    <% end %>
+		</td>
+	</tr>
+
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+</table>

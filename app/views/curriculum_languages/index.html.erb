@@ -1,0 +1,27 @@
+<div class="page-header">
+  <%= link_to new_curriculum_language_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Curriculum language
+  <% end %>
+  <h1>Listing curriculum_languages</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @curriculum_languages) do |curriculum_language| %>
+            <td><%= link_to 'Show', curriculum_language %></td>
+        <td><%= link_to 'Edit', edit_curriculum_language_path(curriculum_language) %></td>
+        <td><%= link_to 'Destroy', curriculum_language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

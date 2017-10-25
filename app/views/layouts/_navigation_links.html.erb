@@ -1,0 +1,19 @@
+<%# add navigation links to this file %>
+
+<!-- Caso estiver logado o menu aparece assim: -->
+<% if user_signed_in? %>
+	<% if current_user.profile.perfil == 1 %>
+		<li><%= link_to 'Usuários', users_path('users') %></li> <!-- Link de Materiais -->
+		<li><%= link_to 'Perfis', ('profiles') %></li>
+		<li><%= link_to 'Currículos', ('curriculums') %></li>
+		<li><%= link_to 'Trabalhos', ('jobs') %></li>
+		<li><%= link_to 'Lista de Serviços', ('careers') %></li>
+		<li><%= link_to 'Cursos', ('courses') %></li>
+		<li><%= link_to 'Experiências', ('experiences') %></li>
+	<% else %>
+		<li><%= link_to 'Usuários', users_path('users') %></li> <!-- Link de Materiais -->
+		<li><%= link_to 'Currículos', ('curriculums') %></li>
+		<li><%= link_to 'Trabalhos', ('jobs') %></li>
+	<% end %>
+<% else %>
+<% end %>
